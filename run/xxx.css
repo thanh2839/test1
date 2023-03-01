@@ -1,0 +1,17 @@
+.content{
+    padding-left: 100px ;
+    margin-top: 20px;
+    margin-bottom: 19px;
+    max-width: 700px;
+}
+.site-main{
+    padding-left: 100px;
+    margin-right: 100px;
+    margin-block-end: 100px;
+    content-visibility: 100px;
+
+}
+.content-area{
+    padding-left:55% ;
+    padding-bottom: 1000px;
+}

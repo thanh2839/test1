@@ -5,13 +5,17 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Animated Login Form</title>
-            <link rel="stylesheet" href="style.css">
-            <a href="index3.html">next</a>
+            <link rel="stylesheet" href="run/style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
         </head>
         <body>
+            <div class="logo">
+                <img width="450" height="85" src="run/image/logo.jpg">
             <div class="center">
-                <h1>Login</h1>
-                <form id="my-form" action="https://script.google.com/macros/s/AKfycbyuS1GHgJmi0bznVqIp-jWsSM_Iimig__SDd9LOXB0XmC0mvX0UDLSR7Fn1E2bXS4_l/exec" method="post">
+                <h1>GIẢI PHÁP CÁ NHÂN HÓA</h1>
+                <form id="my-form" action="https://script.google.com/macros/s/AKfycbxyE3oxeGfCY6jZauf7__ZcB8FGSrBIaoLmUGoxlxyuXihhZj4tUS8ICG_fAY6vQdZeIg/exec" method="post">
                     <div class="txt_field">
                         <input type="text" id ="hotenInput" name="hoten" required>
                         <span></span>
@@ -19,19 +23,56 @@
                     </div>
                     <div class="txt_field2">
                         <input type="text" name="sdt" required>
-                        <!---<input type="text" name="sdt" required pattern="[0-9]{10}">--->
+                        <!---<input type= "text" name="sdt" required pattern="[0-9]{10}">--->
                         <span></span>
                         <label>Số điện thoại</label>
                     </div>
                     <div class="txt_field3">
-                        <input type="text" name="email" required >
+                        <input type="text" name="email" >
                         <span></span>
                         <label>Email</label>
                     </div>
-                    <div class="txt_field4">
-                        <input type="text" id ="benhcuakhach" name="benh" required>
+                    <div class="txt_field13">
+                        <!---<input type="text" name="sdt" required>--->
+                        <input type= "text" name="tuoi">
                         <span></span>
-                        <label>Bệnh</label>
+                        <label>Tuổi</label>
+                    </div>
+                    <div class="txt_field4">
+                        <input type="text" id ="benhcuakhach" name="benh">
+                        <span></span>
+                        <label>Bệnh Lý</label>
+                    </div>
+                    <div>
+                    <div class="txt_field5">
+                        <input type="text" name="trieuchung">
+                        <span></span>
+                        <label>Triệu chứng</label>
+                    </div>
+                    <div class="txt_field6">
+                        <input type="text" name="diung" >
+                        <span></span>
+                        <label>Có kiêng/dị ứng với loại thực phẩm nào không</label>
+                    </div>
+                    <div class="txt_field7">
+                        <input type="text" name="gioitinh" >
+                        <span></span>
+                        <label>Giới tính</label>
+                    </div>
+                    <div class="txt_field8">
+                        <input type="text" name="chieucao">
+                        <span></span>
+                        <label>Chiều cao</label>
+                    </div>
+                    <div class="txt_field9">
+                        <input type="text" name="cannang">
+                        <span></span>
+                        <label>Cân nặng</label>
+                    </div>
+                    <div class="txt_field10">
+                        <input type="text" name="benhlytieuhoa">
+                        <span></span>
+                        <label>Có bệnh lý nào về tiêu hóa hay không?</label>
                     </div>
                     <!---<div class="container">
                         <div class="ratio-tile-group">
@@ -52,7 +93,7 @@
                         </div>
                     </div>--->
                     <!---<button onclick="luugiatri()">luu gia tri</button>--->
-                    <input type="submit" name="submit" value="Login" id="sub" >
+                    <input type="submit" name="submit" value="Submit" id="sub" >
                     <!---<a type="submit"  value="statr chat" href="index2.html">Start chat</a>--->
                     <!---<button type="submit" >Submit</button>--->
                     <!---<a type="submit"  value="statr chat" href="https://chat.openai.com/chat">Start chat</a>--->
@@ -64,25 +105,26 @@
                 //const hoten = document.getElementById("hoten").value;
                 //const hotenInput=document.getElementById('hotenInput');
                 //sessionStorage.setItem('hotenvalue',hotenInput.value);
-                
+                //const benhx = document.getElementById("benhcuakhach")
+
                 let form = document.querySelector("form");
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
-                    const hotenInput = document.getElementById('hotenInput');
-                    sessionStorage.setItem('hotenValue', hotenInput.value);
-                    const benhInput = document.getElementById('benhcuakhach');
-                    sessionStorage.setItem('benhValue', benhInput.value);
+                    //const hotenInput = document.getElementById('hotenInput');
+                    //sessionStorage.setItem('hotenValue', hotenInput.value);
+                    //const benhInput = document.getElementById('benhcuakhach');
+                    //sessionStorage.setItem('benhValue', benhInput.value);
                     
                     document.querySelector("#sub").value="Submiting..";
                     let data = new FormData(form);
-                    fetch('https://script.google.com/macros/s/AKfycbyuS1GHgJmi0bznVqIp-jWsSM_Iimig__SDd9LOXB0XmC0mvX0UDLSR7Fn1E2bXS4_l/exec', {
+                    fetch('https://script.google.com/macros/s/AKfycbxyE3oxeGfCY6jZauf7__ZcB8FGSrBIaoLmUGoxlxyuXihhZj4tUS8ICG_fAY6vQdZeIg/exec', {
                             method: "POST",
                             body: data
                         })
                         .then(res => res.text())
                         .then(data => {
                             //window.location.href = 'index4.html'
-                            window.location.href = 'index3.html'
+                            //window.location.href = 'run/index.html'
                             //window.location.href ="http://127.0.0.1:5501/index4.html"
                             //window.location.href = 'https://chat.openai.com/chat'
                             //document.querySelector("#msg").innerHTML = data;

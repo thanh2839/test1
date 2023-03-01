@@ -1,0 +1,86 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f6e7db;
+    color: rgb(0, 0, 0);
+}
+fontchu {
+    font-family: font_name;
+    src:url('image/DFVN\ Brasika\ Display.otf') format('truetype'),
+   }
+:root{
+    --pink: #f5d8c8;
+    --green: #314641;
+    --blue: #2c4152;
+    --red: #753b37;
+    --orange: #c78a5b;
+    --white: #efdce7;
+}
+.logo{
+    padding-left: 35%;
+}
+.container{
+    padding: 16px; 
+}
+.content{
+    display: flex;
+}
+.content>*{
+    flex:1;
+}
+.title{
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    
+}
+.site-main{
+    padding-left: 40px;
+    padding-right: 20px;
+}
+.site-main>*{
+    margin-bottom: 20px;
+}
+.site-main>* img{
+    margin-bottom: 8px;
+}
+.site-main p1{
+    border-bottom: 10px solid #4567df;
+}
+.content-area{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.content-area>*{
+    flex: 1;
+}
+.content-area1{
+    padding-right: 40px;
+}
+.dish{
+    display: inline-block;
+    margin: 4px;
+}
+.content-area2{
+    padding-right: 40px;
+
+}
+.content-area1 ph4{
+    color: #793C1D;
+    font-family: fontchu;
+}
+.output{
+    line-height: 1.4;
+}
+#output1, #output2{
+    text-align: justify;
+}
+.container p3 {
+    font-size: 10px;
+    font-style:italic;
+}
+.content-area2 px{
+    color: #793C1D;
+    font-family: fontchu;
+}
+/*  */

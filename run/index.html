@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---<link href="index1.html" id="hoten">--->
+    <title>The Vitamin Shoppe</title>
+    <link rel="stylesheet" href="styleanimation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <img width="450" height="85" src="image/logo.jpg">
+    </div>
+    <div class="center">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!---<div class="input">
+        <input type="text" id ="hoten" name="hoten" required>
+        <input type="submit" name="submit" value="Login" id="sub">
+    </div>--->
+    <div class="container">
+        <p1>Xin chào anh/chị <strong>Hovaten</strong> với các dữ liệu anh chị cung cấp, hệ thống AI của The Vitamin Shoppe xây dựng chế độ ăn dinh dưỡng phù hợp với bệnh benhcuakhach như sau:<br><br></p1>
+        <div class="title">Meal Plan</div>
+        <div class="content">
+            <div class="site-main">
+                <!---<div id="outputx"></div>---> 
+                <div class="monday-content">
+                    <img width="250" height="50" src="image/monday1.png"><br>
+                    <div id="output monday"><br></div>
+                </div>    
+                <div class="tuesday-content">
+                    <img width="250" height="50" src="image/tuesday1.png"><br>
+                    <div id="output tuesday"><br></div>
+                </div>
+                <div class="wednesday-content">
+                    <img width="250" height="50" src="image/wednesday.1.png"><br>
+                    <div id="output wednesday"><br></div>
+                </div>
+                <div class="thursday-content">
+                    <img width="250" height="50" src="image/thursday.png"><br>
+                    <div id="output thursday"><br></div>
+                </div>
+                <div class="friday-content">
+                    <img width="250" height="50" src="image/firday1.png"><br>
+                    <div id="output friday"><br></div>
+                </div>
+                <div class="saturday-content">
+                    <img width="250" height="50" src="image/saturday1.png"><br>
+                    <div id="output saturday"><br></div>
+                </div>
+                <div class="sunday-content">
+                    <img width="250" height="50" src="image/sunday1.png"><br>
+                    <div id="output sunday"><br></div>
+                </div>
+                <div id="output xxx"><br></div>
+                <div id="loading" style="display:none">Đang tải phản hồi...</div>
+                <br>
+            </div>
+            <div class="content-area">
+                <div class="content-area1">
+                    <ph4>
+                        <h2>Thực phẩm khuyến cáo dành cho bệnh benhcuakhach</h2>
+                    </ph4>
+                    <p>
+                        <div id="output1"><br></div>
+                        <div id="loading1" style="display:none">Đang tải phản hồi...</div>
+                    </p>
+                </div>
+                <div class="content-area2">
+                    <px><h2> Lời khuyên của tôi </h2></px>
+                    <p>
+                        <div id="output2"><br></div>
+                        <div id="loading2" style="display:none">Đang tải phản hồi...</div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p3>
+            *Để áp dụng chế độ dinh dưỡng cùng các biện pháp hiệu quả cho bệnh benhcuakhach sẽ có sự trợ giúp của các bạn TLSKCN tại The Vitamin Shoppe 
+            </p3>
+    </div>
+    
+    </div>
+    <script src="./gpt.js">
+        const hotenValue = sessionStorage.getItem('hotenValue');
+        const benhValue = sessionStorage.getItem('benhValue');
+
+        const p1 = document.querySelector('p1');
+        const oldText = p1.innerHTML;
+        const newText = oldText.replace('Hovaten', hotenValue);
+        const newText1 = newText.replace('benhcuakhach', benhValue);
+        p1.innerHTML = newText1;
+
+        const p3 = document.querySelector('p3');
+        const oldText3 = p3.innerHTML;
+        const newText3 = oldText3.replace('benhcuakhach', benhValue);
+        p3.innerHTML = newText3;
+
+        const ph4 = document.querySelector('ph4');
+        const oldText4 = ph4.innerHTML;
+        const newText4 = oldText4.replace('benhcuakhach', benhValue);
+        ph4.innerHTML = newText4;
+
+        const p2 = document.querySelector('p2');
+    </script>
+</body>
+</html>
